@@ -1,4 +1,4 @@
-SSimport { Cell } from "./Cell";
+import { Cell } from "./Cell";
 import { Colors } from "./Colors";
 import { Bishop } from "./figures/Bishop";
 import { Figure } from "./figures/Figure";
