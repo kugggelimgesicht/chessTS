@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useEffect, useState } from "react";
 import "./App.css";
 import BoardComponent from "./components/BoardComponent";
@@ -15,7 +17,6 @@ function App() {
 
   useEffect(() => {
     restart();
-    
   }, []);
   function restart() {
     const newBoard = new Board();
@@ -32,7 +33,7 @@ function App() {
   }
   return (
     <div className="app">
-     <Timer restart={restart} currentPlayer={currentPlayer}/>
+      <Timer restart={restart} currentPlayer={currentPlayer} />
       <BoardComponent
         board={board}
         setBoard={setBoard}
@@ -40,14 +41,8 @@ function App() {
         swapPlayer={swapPlayer}
       />
       <div>
-        <LostFigures
-          title="Black figures"
-          figures={board.lostBlackFigures}
-        />
-        <LostFigures
-          title="White figures"
-          figures={board.lostWhiteFigures}
-        />
+        <LostFigures title="Black figures" figures={board.lostBlackFigures} />
+        <LostFigures title="White figures" figures={board.lostWhiteFigures} />
       </div>
     </div>
   );
